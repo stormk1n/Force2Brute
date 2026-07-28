@@ -21,7 +21,7 @@ Force2Brute is written in pure Python 3 and uses native libraries, meaning no he
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com
+   git clone https://github.com/Force2Brute
    cd Force2Brute
    ```
 
@@ -68,7 +68,7 @@ Force2Brute is built to grow. Future iterations of this framework will introduce
 - [ ] Multi-threading for hyper-speed concurrent checks
 
 ---
-
+<!--
 ## ⚠️ Disclaimer
 
-This tool is developed strictly for educational purposes, authorized security auditing, and penetration testing. The author accepts no liability for misuse or damage caused by this utility. Always secure proper authorization before testing network infrastructure.
+This tool is developed strictly for educational purposes, authorized security auditing, and penetration testing. The author accepts no liability for misuse or damage caused by this utility. Always secure proper authorization before testing network infrastructure. -->

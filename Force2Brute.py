@@ -18,7 +18,8 @@ def ftpBrute(target, usrname, password):
         # Stops the ftp enumeration
         ftp.quit()
         return True
-    
+
+# error handling            
     except ftplib.error_perm:
         # Returns  an error message for invalid creds
         print(f"[-] Failed login attempt with {usrname}:{password}")
@@ -42,12 +43,13 @@ def ftpBrute(target, usrname, password):
 
 # Parses arguments and flags
 def main():
-#   Initialize the parser
+# custom formating for the help menu
     custom_formatter = lambda prog: argparse.HelpFormatter(prog, max_help_position=40, width=100)
     
-#   Initialize the parser
+#   creates a variable parser and assigns it the argument attribute
     parser = argparse.ArgumentParser(description="Service bruteforcer", formatter_class=custom_formatter)
-    
+
+# Takes the various arguments for use    
 # Target arguments
     parser.add_argument("-t", "--target", help="Single target info")
     parser.add_argument("-T", "--targets", help="Load targets file")
@@ -63,19 +65,19 @@ def main():
     args = parser.parse_args()
     
     
-# Process the host info
-    targets = []
+# Process the host data
+    targets = [] # creates a list called targets to store host data
     if args.target:
-       targets.append(args.target)
+       targets.append(args.target) #appends the target arg to the targets list
     elif args.targets:
         if os.path.exists(args.targets):
             with open(args.targets, 'r', encoding="utf-8", errors='ignore') as f:
-                targets = [line.strip() for line in f if line.strip()]
+                targets = [line.strip() for line in f if line.strip()] # Load each non-empty line from the target file into the targets list.
         else:
              print(f"[-] File {args.targets} not found")
              return
     
-# Process the user info
+# Process the user data
     users = []
     if args.user:
         users.append(args.user)

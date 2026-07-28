@@ -12,32 +12,35 @@ def httpFlags():
     
     args =parser.parse_args()
     
-    # URL flag
+    # URL arguments
     urls =[]
     if args.url:
        urls.append(args.url)
     elif args.urls:
-        if os.path.exist(args.urls):
+        if os.path.exists(args.urls):
             with open(args.urls, 'r', encoding='utf-8', errors='ignore')as f:
-                urls = {line.strip for line in f if line.strip()}
+                urls = [line.strip for line in f if line.strip()]
         else:
             print(f'[-] File {args.urls} not found')
             return
     
-    #Tags flag
+    #Tags arguments
     tags = []
     if args.tag:	
         tags.append(args.tag)
     elif args.tags:
-        if os.path.exist(args.tags):
+        if os.path.exists(args.tags):
             with open(args.tags, 'r', encoding='utf-8', errors='ignore') as f:
-                tags = {line.strip for line in f if line.strip()}
+                tags = [line.strip for line in f if line.strip()]
         else:
             print(f'[-] File {args.tags} not found')
             return
-    
-    if not urls or tags:
+
+# checks if arguments are missing    
+    if not urls or not tags:
       print('[!] Missing either urls or tags')
+
+#queries the target
     for URL in urls:
         for TAG in tags:
            Request = urllib.request(URL, TAG)
