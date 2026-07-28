@@ -21,7 +21,7 @@ Force2Brute is written in pure Python 3 and uses native libraries, meaning no he
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Force2Brute
+   git clone https://github.com/stormk1n/Force2Brute
    cd Force2Brute
    ```
 
@@ -64,7 +64,7 @@ If installed globally, replace `./Force2Brute.py` with `Force2Brute`.
 Force2Brute is built to grow. Future iterations of this framework will introduce:
 - [ ] Terminal colorization (ANSI colors for Success/Failure tracking)
 - [ ] SSH enumeration module
-- [ ] SMB protocol mapping and authentication module
+- [ ] HTTP 
 - [ ] Multi-threading for hyper-speed concurrent checks
 
 ---
