@@ -1,2 +1,2 @@
 from .ftpFuzz import ftpBrute, ftpMain
-from .DirProb import dirBrute, dirMain
+from .httpBrute import httpBrute, httpMain

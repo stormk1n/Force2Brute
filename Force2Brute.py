@@ -3,7 +3,7 @@ import os
 import sys
 import ftplib
 import argparse
-from F2Bpackages import ftpMain, dirMain
+from F2Bpackages import ftpMain, httpMain
 
 
 # Parses arguments and flags
