@@ -63,8 +63,7 @@ If installed globally, replace `./Force2Brute.py` with `Force2Brute`.
 
 Force2Brute is built to grow. Future iterations of this framework will introduce:
 - [ ] Terminal colorization (ANSI colors for Success/Failure tracking)
-- [ ] SSH enumeration module
-- [ ] HTTP 
+- [ ] SSH, FTP & HTTP enumeration module
 - [ ] Multi-threading for hyper-speed concurrent checks
 
 ---
